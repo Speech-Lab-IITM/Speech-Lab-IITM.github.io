@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="../Assets/Images/favicon.ico" type="image/vnd.microsoft.icon" />
 
     <link href="../tailwind.css" rel="stylesheet">
+    <link href="../index.css" rel="stylesheet">
     </head>
     <body>
         
@@ -60,35 +61,80 @@
 
         <div>
 
-        <div class="flex flex-col py-40 px-10 sm:px-40" style="background: url('../Assets/Images/image-1_edited.jpg')" >
-            
+        <div class="flex flex-col py-5 px-10 sm:px-40" >
+            <a href="projects.html" class="home-page-animation text-center text-1xl font-extrabold p-5 text-blue-500">Project/Intern  positions immediately available in Automatic Speech Recognition !</a>
+            <div class="flex justify-center flex-wrap text-left">
+            <h1 class="text-2xl" style="text-decoration: underline;"><b>Latest News</b></h1>
+            </div>
+            <div class="flex justify-center flex-wrap text-center">
+                <div class="py-3 px-3 m-2 shadow rounded-1xl">
+                    <h1><b>CCC wav2vec2.0</b> is 5th on global <b>SuPERB</b> leaderboard</h1>
+                    <h2>Vasista's work on developing universal speech recognition is now 5th on  <a href="https://superbbenchmark.org/leaderboard?subset=Public+Set" target="_blank" style="color: blue;">Global leaderboard of SuPERB benchmark.</a> (5th in terms of Rank and 2nd in terms of overall score). 
+                        The top 10 representations in Leaderboard  (apart from us) are all from Microsoft or Meta-AI. 
+                        We were able to achieve this by training on just <b>960 hours</b> of data.
+                    </h2>
+                </div>
+            </div>
+            <div class="flex justify-center flex-wrap text-left">
+                <h1 class="text-2xl" style="text-decoration: underline;"><b>Recent Publications</b></h1>
+                </div>
             <div class="flex justify-center flex-wrap text-center">
                 
-                <div class="bg-blue-100 py-3 px-3 m-2 shadow rounded-2xl hover:bg-gray-900 hover:text-white">
+                <div class="w-60 py-3 px-3 m-2 shadow rounded-1xl">
                     
-                    <a class="py-3 px-3 m-2" href="https://asr.iitm.ac.in/test2/" target="_blank">
-                        <h1 class="text-4xl p-4 font-bold">Speech to Speech Translate</h1>
-                        Speak or Upload a Audio and Translate Speech to a new language
+                    <h1><b>Domain Adaptation of low-resource Target-Domain models using well-trained ASR Conformer Models</b></h1>
+                    <h2 class="text-right"> <span>To Appear at IEEE SLT 2022</span></h2>
+                    <h2 class="text-right">Sukhadia, Vrunda</h2>
+                </div>
+                <div class="w-60 py-3 px-3 m-2 shadow rounded-1xl">
+                    <h1><b>PADA: Pruning Assisted Domain Adaptation For Self-Supervised Speech Representations</b></h1>
+                    <h2 class="text-right"> <span>To Appear at IEEE SLT 2022</span></h2>
+                    <h2 class="text-right">Lodagala, Vasista Sai;</h2>
+                    <h2 class="text-right"> Ghosh, Sreyan</h2>
+
+                </div>
+                <div class="w-60 py-3 px-3 m-2 shadow rounded-1xl">
+                    <h1 class="text-1xl"><b>CCC-WAV2VEC 2.0: Clustering Aided Cross Contrstive Self-Supervised Learning of Speech Representations</b></h1>
+                    <h2 class="text-right"> <span>To Appear at IEEE SLT 2022</span></h2>
+                    <h2 class="text-right">Lodagala, Vasista Sai;</h2>
+                    <h2 class="text-right"> Ghosh, Sreyan</h2>
+                </div>
+                <div class="w-60 py-3 px-3 m-2 shadow rounded-1xl">
+                    <h1><b>Joint Encoder-Decoder Self-Supervised Pre-training for ASR.</b></h1>
+                    <h2 class="text-right"> <span> Interspeech.2022-11338</span></h2>
+                    <h2 class="text-right">Arunkumar, A</h2>
+                </div>
+            </div>
+            <div class="flex justify-center flex-wrap text-left">
+                <h1 class="text-2xl" style="text-decoration: underline;"><b>Check out our Demos</b></h1>
+                </div>
+            <div class="flex justify-center flex-wrap text-center">
+                
+                <div class="w-120 bg-blue-100 py-3 px-3 m-2 shadow rounded-2xl hover:bg-gray-900 hover:text-white">
+                    
+                    <a class="py-3 px-3 mx-auto" href="https://asr.iitm.ac.in/test2/" target="_blank">
+                        <h1 class="text-3xl  font-bold">Speech to Speech</h1>
+                        <!-- Speak or Upload a Audio and Translate Speech to a new language -->
                     </a>
                 </div>
-                <div class="bg-blue-100 py-3 px-3 m-2 shadow rounded-2xl hover:bg-gray-900 hover:text-white">
+                <div class="w-60 bg-blue-100 py-3 px-3 m-2 shadow rounded-2xl hover:bg-gray-900 hover:text-white">
                     
-                    <a class="py-3 px-3 m-2" href="https://asr.iitm.ac.in/asr/v2/" target="_blank">
-                        <h1 class="text-4xl p-4 font-bold">ASR Online</h1>
-                        Tap and Speak 
+                    <a class="py-3 px-3 mx-auto" href="https://asr.iitm.ac.in/asr/v2/" target="_blank">
+                        <h1 class="text-3xl  font-bold">ASR Online</h1>
+                        <!-- Tap and Speak  -->
                     </a>
                 </div>
-                <div class="bg-blue-100 py-3 px-3 m-2 shadow rounded-2xl hover:bg-gray-900 hover:text-white">
+                <div class="w-60 bg-blue-100 py-3 px-3 m-2 shadow rounded-2xl hover:bg-gray-900 hover:text-white">
                     <a  class="py-3 px-3 m-2" href="https://asr.iitm.ac.in/ttsv2" target="_blank">
-                        <h1 class="text-4xl p-4 font-bold">TTS</h1>
-                        Developed by <a href="http://www.cse.iitm.ac.in/lab_details.php?arg=MTQ=" target="_blank" style="color: blue;">SMT Lab</a>
+                        <h1 class="text-3xl  font-bold">TTS</h1>
+                        <!-- Developed by <a href="http://www.cse.iitm.ac.in/lab_details.php?arg=MTQ=" target="_blank" style="color: blue;">SMT Lab</a> -->
                     </a>
                 </div>
-                <div class="bg-blue-100 py-3 px-3 m-2 shadow rounded-2xl hover:bg-gray-900 hover:text-white">
+                <div class="w-60 bg-blue-100 py-3 px-3 m-2 shadow rounded-2xl hover:bg-gray-900 hover:text-white">
                     <a class="py-3 px-3 m-2" href="https://asr.iitm.ac.in/stage" target="_blank">
-                        <h1 class="text-4xl p-4  font-bold">Video to Video</h1>
-                        Speech translation for
-                        video files !!!
+                        <h1 class="text-3xl mx-auto  font-bold">Video to Video</h1>
+                        <!-- Speech translation for
+                        video files !!! -->
                     </a>
                 </div>
             </div>
@@ -191,11 +237,42 @@
                     <div>ee20s008@smail.iitm.ac.in</div>
                 </div>
                 <div class="p-4 m-4 shadow rounded-2xl bg-gray-100">
-                    <img src="../Assets/Images/pratik_kumar.jpeg" alt="" class="rounded-full">
-                    <div><strong>Pratik Kumar</strong></div> 
+                    <img src="../Assets/Images/arun.jpg" alt="" class="rounded-full">
+                    <div><strong>Arun Kumar</strong></div> 
                     <div><em>MS Scholar</em></div>
-                    <div>ee20m018@smail.iitm.ac.in</div>
+                    <div>cs20s013@smail.iitm.ac.in</div>
                 </div>
+                <div class="p-4 m-4 shadow rounded-2xl bg-gray-100">
+                    <img src="../Assets/Images/ashish-1.png" alt="" class="rounded-full">
+                    <div><strong>Ashish Seth</strong></div> 
+                    <div><em>MS Scholar</em></div>
+                    <div>cs20s030@smail.iitm.ac.in</div>
+                </div>
+                <div class="p-4 m-4 shadow rounded-2xl bg-gray-100">
+                    <img src="../Assets/Images/vasista.jpg" alt="" class="rounded-full">
+                    <div><strong>Vasista Lodagala</strong></div> 
+                    <div><em>MS Scholar</em></div>
+                    <div>ee19s015@smail.iitm.ac.in</div>
+                </div>
+                <div class="p-4 m-4 shadow rounded-2xl bg-gray-100">
+                    <img src="../Assets/Images/tanzir-1.jpg" alt="" class="rounded-full">
+                    <div><strong>Tanzir Silar</strong></div> 
+                    <div><em>Dual Degree Student</em></div>
+                    <div>ee18b117@smail.iitm.ac.in</div>
+                </div>
+                <div class="p-4 m-4 shadow rounded-2xl bg-gray-100">
+                    <img src="../Assets/Images/kaousheik.jpg" alt="" class="rounded-full">
+                    <div><strong>Kaousheik</strong></div> 
+                    <div><em>Dual Degree Student</em></div>
+                    <div>ee18b134@smail.iitm.ac.in</div>
+                </div>
+                <div class="p-4 m-4 shadow rounded-2xl bg-gray-100">
+                    <img src="../Assets/Images/ramzz.jpg" alt="" class="rounded-full">
+                    <div><strong>Ramanan</strong></div> 
+                    <div><em>Dual Degree Student</em></div>
+                    <div>ee18b145@smail.iitm.ac.in</div>
+                </div>
+
                 <div class="p-4 m-4 shadow rounded-2xl bg-gray-100">
                     <img src="../Assets/Images/nith1_edited.webp" alt="" class="rounded-full">
                     <div><strong>Nithya R</strong></div> 
@@ -203,29 +280,18 @@
                     <div>nithravi1212@gmail.com</div>
                 </div>
                 <div class="p-4 m-4 shadow rounded-2xl bg-gray-100">
-                    <img src="../Assets/Images/sandesh_katta.jpeg" alt="" class="rounded-full">
-                    <div><strong>Sandesh Katta</strong></div> 
+                    <img src="../Assets/Images/mwj-1.jpg" alt="" class="rounded-full">
+                    <div><strong>Mohammad Wajahat</strong></div> 
                     <div><em>Project Associate</em></div>
-                    <div>sandesh.katta97@gmail.com</div>
+                    <div>mdwajtech@gmail.com</div>
                 </div>
                 <div class="p-4 m-4 shadow rounded-2xl bg-gray-100">
-                    <img src="../Assets/Images/sreyangosh.jpg" alt="" class="rounded-full">
-                    <div><strong>Sreyan Ghosh</strong></div> 
+                    <img src="../Assets/Images/jordan.jpg" alt="" class="rounded-full">
+                    <div><strong>Jordan Fernandes</strong></div> 
                     <div><em>Project Associate</em></div>
-                    <div>gsreyan@gmail.com</div>
+                    <div>mojojojo1460@gmail.com</div>
                 </div>
-                <div class="p-4 m-4 shadow rounded-2xl bg-gray-100">
-                    <img src="../Assets/Images/adithyaraj_k.jpg" alt="" class="rounded-full">
-                    <div><strong>Adithya Raj K</strong></div> 
-                    <div><em>Project Associate</em></div>
-                    <div>kadithyaraj@gmail.com</div>
-                </div>
-                <div class="p-4 m-4 shadow rounded-2xl bg-gray-100">
-                    <img src="../Assets/Images/anish_bhanushali.jpeg" alt="" class="rounded-full">
-                    <div><strong>Anish Bhanushali</strong></div> 
-                    <div><em>Project Associate</em></div>
-                    <div>anish9207@gmail.com</div>
-                </div>
+
                 </div>
             </div>
         </div>
