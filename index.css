@@ -9,3 +9,20 @@
     50% { color: blue; }
     100% { color: red; }
   }
+
+  .dropdown-index {
+    display: inline-block;
+    position: relative;
+    color: inherit;
+  }
+
+  .dropdown-options-index {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    background-color: black;
+  }
+  
+  .dropdown-index:hover .dropdown-options-index {
+    display: block;
+  }
