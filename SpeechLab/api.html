@@ -55,23 +55,26 @@
     <p>Request: <code>curl -v -X POST -F &#39;file=@voice.mp3&#39; -F &#39;language=english&#39; -F &#39;vtt=true&#39; https://asr.iitm.ac.in/asr/v2/decode</code></p>
     <p>Response: {&quot;status&quot;:&quot;success&quot;,&quot;time_taken&quot;:&quot;4.61&quot;,&quot;transcript&quot;:&quot;welcome to madras program thank you&quot;,&quot;vtt&quot;:&quot;WEBVTT\n\n00:00:00.800 --&gt; 00:00:04.600\nwelcome to madras\n\n00:00:04.900 --&gt; 00:00:10.000\nprogram thank you&quot;}</p>
     <h3 id="python-example-">Python Example:</h3>
-    <pre><code>import requests
+    <pre>
+    import requests
 
 
-    <span class="hljs-keyword">files</span> = {
+    files = {
 
-    <span class="hljs-string">'file'</span>: <span class="hljs-keyword">open</span>(<span class="hljs-string">'tamil.mp3'</span>, <span class="hljs-string">'rb'</span>),
+    'file': open('tamil.mp3', 'rb'),
 
-    <span class="hljs-string">'language'</span>: (None, <span class="hljs-string">'tamil'</span>),
+    'language': (None, 'tamil'),
 
-    <span class="hljs-string">'vtt'</span>: (None, <span class="hljs-string">'true'</span>),
+    'vtt': (None, 'true'),
 
     }
 
-    response = requests.post(<span class="hljs-string">'https://asr.iitm.ac.in/asr/v2/decode'</span>, <span class="hljs-keyword">files</span>=<span class="hljs-keyword">files</span>)
+    response = requests.post('https://asr.iitm.ac.in/asr/v2/decode', files=files)
 
-    <span class="hljs-keyword">print</span>(response.json())
-    </code></pre><h3 id="web-demo-">Web Demo:</h3>
+    print(response.json())
+    </pre>
+
+    <h3 id="web-demo-">Web Demo:</h3>
     <p><a href="https://asr.iitm.ac.in/asr/v2">https://asr.iitm.ac.in/asr/v2</a></p>
   </body>
 </html>
