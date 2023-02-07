@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title>Speech Lab IITM Open Source APIs</title>
+  </head>
+  <body>
+    <h1 id="speech-lab-iitm-models-and-apis">Speech Lab IITM Open Source APIs</h1>
+    <h2 id="asr-v2-api-documentation">ASR v2 API Documentation</h2>
+    <p>Our ASR API accepts the following three inputs in the request:</p>
+    <ul>
+    <li><p><strong>file</strong> - the audio or video file to be transcribed</p>
+    </li>
+    <li><p><strong>language</strong> - the language of the source audio/video in all lowercase (eg: tamil, english)</p>
+    </li>
+    <li><p><strong>vtt</strong> (optional) - whether a webVTT caption file has to be generated. This is an optional value. It accepts two string values either true or false. By default, this is false. This can be used for captioning purposes.</p>
+    </li>
+    </ul>
+    <p>On success, the API returns a JSON response with the following fields:</p>
+    <ul>
+    <li><p><strong>status</strong>: success</p>
+    </li>
+    <li><p><strong>time_taken</strong>: time taken to transcribe the given audio/video in seconds</p>
+    </li>
+    <li><p><strong>transcript</strong>: the transcription of the given input</p>
+    </li>
+    <li><p><strong>vtt</strong>: WebVTT caption if it was requested</p>
+    </li>
+    </ul>
+    <p>On failure, the API returns a JSON response with the following fields:</p>
+    <ul>
+    <li><p><strong>status</strong>: failure</p>
+    </li>
+    <li><p><strong>reason</strong>: The reason for failure of the request</p>
+    </li>
+    </ul>
+    <p>Sample audio files to test API: <a href="https://drive.google.com/file/d/1ucJCfKfKr00_09H8_FmW57xFYHYPzC2h/view?usp=share_link">English</a>, <a href="https://drive.google.com/file/d/19tgIL2YeZ-vU9eABePeBL_O1f1jWp2Sv/view?usp=share_link">Tamil</a></p>
+    <p>Our ASR API accepts files of most common formats such as mp3, mp4, wav, ogg etc.,</p>
+    <p>Currently supported languages:</p>
+    <ol>
+    <li><p>English</p>
+    </li>
+    <li><p>Tamil</p>
+    </li>
+    <li><p>Hindi</p>
+    </li>
+    <li><p>Gujarati</p>
+    </li>
+    <li><p>Kannada</p>
+    </li>
+    <li><p>Marathi</p>
+    </li>
+    <li><p>Telugu</p>
+    </li>
+    </ol>
+    <h3 id="curl-example-">CURL Example:</h3>
+    <p>Request: <code>curl -v -X POST -F &#39;file=@voice.mp3&#39; -F &#39;language=english&#39; -F &#39;vtt=true&#39; https://asr.iitm.ac.in/asr/v2/decode</code></p>
+    <p>Response: {&quot;status&quot;:&quot;success&quot;,&quot;time_taken&quot;:&quot;4.61&quot;,&quot;transcript&quot;:&quot;welcome to madras program thank you&quot;,&quot;vtt&quot;:&quot;WEBVTT\n\n00:00:00.800 --&gt; 00:00:04.600\nwelcome to madras\n\n00:00:04.900 --&gt; 00:00:10.000\nprogram thank you&quot;}</p>
+    <h3 id="python-example-">Python Example:</h3>
+    <pre><code>import requests
+
+
+    <span class="hljs-keyword">files</span> = {
+
+    <span class="hljs-string">'file'</span>: <span class="hljs-keyword">open</span>(<span class="hljs-string">'tamil.mp3'</span>, <span class="hljs-string">'rb'</span>),
+
+    <span class="hljs-string">'language'</span>: (None, <span class="hljs-string">'tamil'</span>),
+
+    <span class="hljs-string">'vtt'</span>: (None, <span class="hljs-string">'true'</span>),
+
+    }
+
+    response = requests.post(<span class="hljs-string">'https://asr.iitm.ac.in/asr/v2/decode'</span>, <span class="hljs-keyword">files</span>=<span class="hljs-keyword">files</span>)
+
+    <span class="hljs-keyword">print</span>(response.json())
+    </code></pre><h3 id="web-demo-">Web Demo:</h3>
+    <p><a href="https://asr.iitm.ac.in/asr/v2">https://asr.iitm.ac.in/asr/v2</a></p>
+  </body>
+</html>
