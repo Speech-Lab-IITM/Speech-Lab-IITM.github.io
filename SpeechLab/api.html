@@ -134,17 +134,12 @@ import requests
 
 
 files = {
-
 'file': open('tamil.mp3', 'rb'),
-
 'language': (None, 'tamil'),
-
 'vtt': (None, 'true'),
-
 }
 
 response = requests.post('https://asr.iitm.ac.in/asr/v2/decode', files=files)
-
 print(response.json())
                 </pre>
                 </br>
