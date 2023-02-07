@@ -73,7 +73,7 @@
             <div class="py-4">
                 <h2 class="text-left font-bold">ASR v2 API Documentation</h2>
                 <p>Our ASR API accepts the following three inputs in the request:</p>
-                <ul class="list-disc">
+                <ul class="list-disc px-10">
                 <li><p><strong>file</strong> - the audio or video file to be transcribed</p>
                 </li>
                 <li><p><strong>language</strong> - the language of the source audio/video in all lowercase (eg: tamil, english)</p>
@@ -83,7 +83,7 @@
                 </ul>
                 </br>
                 <p>On success, the API returns a JSON response with the following fields:</p>
-                <ul class="list-disc">
+                <ul class="list-disc px-10">
                 <li><p><strong>status</strong>: success</p>
                 </li>
                 <li><p><strong>time_taken</strong>: time taken to transcribe the given audio/video in seconds</p>
@@ -95,14 +95,15 @@
                 </ul>
                 </br>
                 <p>On failure, the API returns a JSON response with the following fields:</p>
-                <ul class="list-disc">
+                <ul class="list-disc px-10">
                 <li><p><strong>status</strong>: failure</p>
                 </li>
                 <li><p><strong>reason</strong>: The reason for failure of the request</p>
                 </li>
                 </ul>
                 </br>
-                <p>Sample audio files to test API: <a href="https://drive.google.com/file/d/1ucJCfKfKr00_09H8_FmW57xFYHYPzC2h/view?usp=share_link">English</a>, <a href="https://drive.google.com/file/d/19tgIL2YeZ-vU9eABePeBL_O1f1jWp2Sv/view?usp=share_link">Tamil</a></p>
+                <p>Sample audio files to test API: <a href="https://drive.google.com/file/d/1ucJCfKfKr00_09H8_FmW57xFYHYPzC2h/view?usp=share_link" target="_blank" style="color: blue;">English</a>, <a href="https://drive.google.com/file/d/19tgIL2YeZ-vU9eABePeBL_O1f1jWp2Sv/view?usp=share_link" target="_blank" style="color: blue;">Tamil</a></p>
+                </br>
                 <p>Our ASR API accepts files of most common formats such as mp3, mp4, wav, ogg etc.,</p>
                 </br>
                 <p>Currently supported languages:</p>
@@ -129,27 +130,27 @@
                 </br>
                 <h3 class="text-left font-bold">Python Example:</h3>
                 <pre>
-                import requests
+import requests
 
 
-                files = {
+files = {
 
-                'file': open('tamil.mp3', 'rb'),
+'file': open('tamil.mp3', 'rb'),
 
-                'language': (None, 'tamil'),
+'language': (None, 'tamil'),
 
-                'vtt': (None, 'true'),
+'vtt': (None, 'true'),
 
-                }
+}
 
-                response = requests.post('https://asr.iitm.ac.in/asr/v2/decode', files=files)
+response = requests.post('https://asr.iitm.ac.in/asr/v2/decode', files=files)
 
-                print(response.json())
+print(response.json())
                 </pre>
                 </br>
 
                 <h3 class="text-left font-bold">Web Demo:</h3>
-                <p><a href="https://asr.iitm.ac.in/asr/v2">https://asr.iitm.ac.in/asr/v2</a></p>
+                <p><a href="https://asr.iitm.ac.in/asr/v2" target="_blank" style="color: blue;">https://asr.iitm.ac.in/asr/v2</a></p>
             </div>            
 
         <!--
