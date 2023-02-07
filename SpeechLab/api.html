@@ -56,22 +56,22 @@
     <p>Response: {&quot;status&quot;:&quot;success&quot;,&quot;time_taken&quot;:&quot;4.61&quot;,&quot;transcript&quot;:&quot;welcome to madras program thank you&quot;,&quot;vtt&quot;:&quot;WEBVTT\n\n00:00:00.800 --&gt; 00:00:04.600\nwelcome to madras\n\n00:00:04.900 --&gt; 00:00:10.000\nprogram thank you&quot;}</p>
     <h3 id="python-example-">Python Example:</h3>
     <pre>
-    import requests
+import requests
 
 
-    files = {
+files = {
 
-    'file': open('tamil.mp3', 'rb'),
+'file': open('tamil.mp3', 'rb'),
 
-    'language': (None, 'tamil'),
+'language': (None, 'tamil'),
 
-    'vtt': (None, 'true'),
+'vtt': (None, 'true'),
 
-    }
+}
 
-    response = requests.post('https://asr.iitm.ac.in/asr/v2/decode', files=files)
+response = requests.post('https://asr.iitm.ac.in/asr/v2/decode', files=files)
 
-    print(response.json())
+print(response.json())
     </pre>
 
     <h3 id="web-demo-">Web Demo:</h3>
