@@ -73,7 +73,7 @@
             <div class="py-4">
                 <h2 class="text-left font-bold">ASR v2 API Documentation</h2>
                 <p>Our ASR API accepts the following three inputs in the request:</p>
-                <ul>
+                <ul class="list-disc">
                 <li><p><strong>file</strong> - the audio or video file to be transcribed</p>
                 </li>
                 <li><p><strong>language</strong> - the language of the source audio/video in all lowercase (eg: tamil, english)</p>
@@ -81,8 +81,9 @@
                 <li><p><strong>vtt</strong> (optional) - whether a webVTT caption file has to be generated. This is an optional value. It accepts two string values either true or false. By default, this is false. This can be used for captioning purposes.</p>
                 </li>
                 </ul>
+                </br>
                 <p>On success, the API returns a JSON response with the following fields:</p>
-                <ul>
+                <ul class="list-disc">
                 <li><p><strong>status</strong>: success</p>
                 </li>
                 <li><p><strong>time_taken</strong>: time taken to transcribe the given audio/video in seconds</p>
@@ -92,17 +93,20 @@
                 <li><p><strong>vtt</strong>: WebVTT caption if it was requested</p>
                 </li>
                 </ul>
+                </br>
                 <p>On failure, the API returns a JSON response with the following fields:</p>
-                <ul>
+                <ul class="list-disc">
                 <li><p><strong>status</strong>: failure</p>
                 </li>
                 <li><p><strong>reason</strong>: The reason for failure of the request</p>
                 </li>
                 </ul>
+                </br>
                 <p>Sample audio files to test API: <a href="https://drive.google.com/file/d/1ucJCfKfKr00_09H8_FmW57xFYHYPzC2h/view?usp=share_link">English</a>, <a href="https://drive.google.com/file/d/19tgIL2YeZ-vU9eABePeBL_O1f1jWp2Sv/view?usp=share_link">Tamil</a></p>
                 <p>Our ASR API accepts files of most common formats such as mp3, mp4, wav, ogg etc.,</p>
+                </br>
                 <p>Currently supported languages:</p>
-                <ol>
+                <ol class="list-decimal">
                 <li><p>English</p>
                 </li>
                 <li><p>Tamil</p>
@@ -118,9 +122,11 @@
                 <li><p>Telugu</p>
                 </li>
                 </ol>
+                </br>
                 <h3 class="text-left font-bold">CURL Example:</h3>
                 <p>Request: <code>curl -v -X POST -F &#39;file=@voice.mp3&#39; -F &#39;language=english&#39; -F &#39;vtt=true&#39; https://asr.iitm.ac.in/asr/v2/decode</code></p>
                 <p>Response: {&quot;status&quot;:&quot;success&quot;,&quot;time_taken&quot;:&quot;4.61&quot;,&quot;transcript&quot;:&quot;welcome to madras program thank you&quot;,&quot;vtt&quot;:&quot;WEBVTT\n\n00:00:00.800 --&gt; 00:00:04.600\nwelcome to madras\n\n00:00:04.900 --&gt; 00:00:10.000\nprogram thank you&quot;}</p>
+                </br>
                 <h3 class="text-left font-bold">Python Example:</h3>
                 <pre>
                 import requests
@@ -140,6 +146,7 @@
 
                 print(response.json())
                 </pre>
+                </br>
 
                 <h3 class="text-left font-bold">Web Demo:</h3>
                 <p><a href="https://asr.iitm.ac.in/asr/v2">https://asr.iitm.ac.in/asr/v2</a></p>
