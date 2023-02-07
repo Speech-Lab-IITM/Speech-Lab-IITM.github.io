@@ -34,25 +34,25 @@
             
 
         <ul class=" flex justify-around items-center flex-wrap  font-semibold ">
-            <a href="index.html">
+            <a href="../index.html">
                 <li class="rounded-2xl hover:text-white py-4 px-6 hover:bg-gray-900">Home</li>
             </a>
-            <a href="./SpeechLab/index.html" >
+            <a href="index.html" >
                 <li class="rounded-2xl hover:text-white py-4 px-6 hover:bg-gray-900">Lab page</li>
             </a>
             <a href="teaching.html">
                 <li class="rounded-2xl hover:text-white py-4 px-6 hover:bg-gray-900">Teaching</li>
             </a>
-            <a href="./SpeechLab/projects.html">
+            <a href="projects.html">
                 <li class="rounded-2xl hover:text-white py-4 px-6 hover:bg-gray-900">Projects</li>
             </a>
-            <a href="./SpeechLab/publications.html">
+            <a href="publications.html">
                 <li class="rounded-2xl hover:text-white py-4 px-6 hover:bg-gray-900">Publications</li>
             </a>
-            <a href="./SpeechLab/alumni.html">
+            <a href="alumni.html">
                 <li class="rounded-2xl hover:text-white py-4 px-6 hover:bg-gray-900">Students</li>
             </a>
-            <a href="./SpeechLab/api.html">
+            <a href="api.html">
                 <li class="rounded-2xl hover:text-white py-4 px-6 hover:bg-gray-900">Open Source APIs</li>
             </a>
         </ul>
@@ -67,12 +67,11 @@
 
         <div class="flex flex-col p-10">
 
-            <div class="text-4xl font-extrabold py-4">Publications</div>
+            <div class="text-4xl font-extrabold py-4">Speech Lab IITM Open Source APIs</div>
 
             
             <div class="py-4">
-                <h1 id="speech-lab-iitm-models-and-apis">Speech Lab IITM Open Source APIs</h1>
-                <h2 id="asr-v2-api-documentation">ASR v2 API Documentation</h2>
+                <h2 class="text-left font-bold">ASR v2 API Documentation</h2>
                 <p>Our ASR API accepts the following three inputs in the request:</p>
                 <ul>
                 <li><p><strong>file</strong> - the audio or video file to be transcribed</p>
@@ -119,10 +118,10 @@
                 <li><p>Telugu</p>
                 </li>
                 </ol>
-                <h3 id="curl-example-">CURL Example:</h3>
+                <h3 class="text-left font-bold">CURL Example:</h3>
                 <p>Request: <code>curl -v -X POST -F &#39;file=@voice.mp3&#39; -F &#39;language=english&#39; -F &#39;vtt=true&#39; https://asr.iitm.ac.in/asr/v2/decode</code></p>
                 <p>Response: {&quot;status&quot;:&quot;success&quot;,&quot;time_taken&quot;:&quot;4.61&quot;,&quot;transcript&quot;:&quot;welcome to madras program thank you&quot;,&quot;vtt&quot;:&quot;WEBVTT\n\n00:00:00.800 --&gt; 00:00:04.600\nwelcome to madras\n\n00:00:04.900 --&gt; 00:00:10.000\nprogram thank you&quot;}</p>
-                <h3 id="python-example-">Python Example:</h3>
+                <h3 class="text-left font-bold">Python Example:</h3>
                 <pre>
                 import requests
 
@@ -142,7 +141,7 @@
                 print(response.json())
                 </pre>
 
-                <h3 id="web-demo-">Web Demo:</h3>
+                <h3 class="text-left font-bold">Web Demo:</h3>
                 <p><a href="https://asr.iitm.ac.in/asr/v2">https://asr.iitm.ac.in/asr/v2</a></p>
             </div>            
 
